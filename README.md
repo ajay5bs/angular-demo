@@ -1,2 +1,2 @@
-# angular-demo
-This project will have code for basic angular features to understand how it works
+# AngularDemo
+Creating Demo code to explain all Angular Concepts

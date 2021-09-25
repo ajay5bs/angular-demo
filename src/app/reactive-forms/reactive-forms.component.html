@@ -1,0 +1,58 @@
+<div class="content">
+    <div class="registration-form">
+        <div class="header">Reactive Form</div>
+        <div class="form-body">
+            <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="first-name">First Name</label>
+                        <input type="text" class="form-control" id="first-name" placeholder="First Name"
+                            formControlName="firstName" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }">
+                            <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                                <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                            </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" class="form-control" id="last-name" placeholder="Last Name"
+                            formControlName="lastName" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }">
+                        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                            <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select class="form-control" formControlName="gender" [ngClass]="{ 'is-invalid': submitted && f.gender.errors }">
+                        <option>Female</option>
+                        <option>Male</option>
+                        <option>Others</option>
+                    </select>
+                    <div *ngIf="submitted && f.gender.errors" class="invalid-feedback">
+                        <div *ngIf="f.gender.errors.required">Please select a gender from the list</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" class="form-control" id="dob" formControlName="dob" [ngClass]="{ 'is-invalid': submitted && f.dob.errors }">
+                    <div *ngIf="submitted && f.dob.errors" class="invalid-feedback">
+                        <div *ngIf="f.dob.errors.required">Date of Birth is required</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Department</label>
+                    <select class="form-control" formControlName="department" [ngClass]="{ 'is-invalid': submitted && f.department.errors }">
+                        <option>Accounts</option>
+                        <option>Sales</option>
+                        <option>Human Resource</option>
+                    </select>
+                    <div *ngIf="submitted && f.department.errors" class="invalid-feedback">
+                        <div *ngIf="f.department.errors.required">Please select a department from the list</div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-dark btn-lg">Register</button>
+                <div *ngIf="success" class="success">*New Employee is Registered</div>
+            </form>
+        </div>
+    </div>
+</div>

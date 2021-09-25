@@ -1,0 +1,31 @@
+<div class="title">
+   {{title}}
+</div>
+<div class="row vh-100">
+  <div class="col-12 col-md-2 p-0">
+    <div class="container-fluid h-100">
+      <div class="row h-100">
+          <aside class="col-12 p-0 bg-dark">
+              <nav class="navbar navbar-expand navbar-dark bg-dark flex-md-column flex-row align-items-start">
+                  <div class="collapse navbar-collapse">
+                      <ul class="flex-md-column flex-row navbar-nav pl-4 justify-content-between">
+                          <li class="nav-item">
+                              <a class="nav-link pl-0 registration" routerLink="/reactiveforms" routerLinkActive="active">{{reactiveforms}}</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link pl-0 empDetail" routerLink="/lifecycle" routerLinkActive="active">{{lifecycle}}</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link pl-0 empDetail" routerLink="/ngZone" routerLinkActive="active">{{ngZone}}</a>
+                          </li>
+                      </ul>
+                  </div>
+              </nav>
+          </aside>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-10 p-3">
+    <router-outlet></router-outlet>
+  </div>
+</div>
