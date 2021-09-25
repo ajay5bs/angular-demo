@@ -3,7 +3,7 @@ import { EmployeeService } from '../employee.service';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { ReactiveFormsComponent } from './reactive-forms.component';
 
-describe('EmployeeRegistrationComponent', () => {
+describe('ReactiveFormsComponent', () => {
   let component: ReactiveFormsComponent;
   let fixture: ComponentFixture<ReactiveFormsComponent>;
 
@@ -26,9 +26,9 @@ describe('EmployeeRegistrationComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it(`should have header 'Employee Registration'`, () => {
+  it(`should have header 'Reactive Form'`, () => {
     const header = fixture.nativeElement.querySelector('.header');
-    expect(header.textContent).toContain('Employee Registration');
+    expect(header.textContent).toContain('Reactive Form');
   });
 
   it('should have 5 form elements', () => {

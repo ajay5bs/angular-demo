@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Employee, EmployeeService } from '../employee.service';
 import { LifeCycleComponent } from './life-cycle.component';
 
-describe('EmployeeDetailsComponent', () => {
+describe('LifeCycleComponent', () => {
   let component: LifeCycleComponent;
   let fixture: ComponentFixture<LifeCycleComponent>;
 

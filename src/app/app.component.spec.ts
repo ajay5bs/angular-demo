@@ -20,26 +20,34 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have title as 'Employee Portal'`, () => {
+  it(`should have title as 'Angular Features Demo'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Employee Portal');
+    expect(app.title).toEqual('Angular Features Demo');
   });
 
-  it(`should have navigation link 'Registration'`, () => {
+  it(`should have navigation link 'Reactive Forms'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     fixture.detectChanges();
-    const anchor = fixture.nativeElement.querySelector('.registration');
-    expect(anchor.textContent).toContain(app.registration);
+    const anchor = fixture.nativeElement.querySelector('.reactiveforms');
+    expect(anchor.textContent).toContain(app.reactiveforms);
   });
 
-  it(`should have navigation link 'Employee Details'`, () => {
+  it(`should have navigation link 'Life Cycle Events'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     fixture.detectChanges();
-    const anchor = fixture.nativeElement.querySelector('.empDetail');
-    expect(anchor.textContent).toContain(app.empDetail);
+    const anchor = fixture.nativeElement.querySelector('.lifecycle');
+    expect(anchor.textContent).toContain(app.lifecycle);
+  });
+
+  it(`should have navigation link 'NG Zone Demo'`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    fixture.detectChanges();
+    const anchor = fixture.nativeElement.querySelector('.ngZone');
+    expect(anchor.textContent).toContain(app.ngZone);
   });
 
 });

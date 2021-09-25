@@ -9,5 +9,5 @@ export class AppComponent {
   title = 'Angular Features Demo';
   reactiveforms ='Reactive Forms';
   lifecycle ='Life Cycle Events';
-  ngZone = 'NG Zone test';
+  ngZone = 'NG Zone Demo';
 }
